@@ -16,8 +16,9 @@ canvas {
   background-color: rgba(0, 0, 0,.2);
 }
 .glyphicon-heart{
+  padding-top:.2em;
   color:$pinkish;
-  font-size: 3.25em;
+  font-size: 2.25em;
   float:right;
 }
 .navbar-brand{
@@ -29,10 +30,10 @@ canvas {
 */
 .cake {
   position: absolute;
-  top: 50%;
+  top: 5em;
   left: 50%;
   margin-left: -50px;
-  margin-top: -22em;
+margin-top:0;
   width: 100px;
   height: 100px;
 }
@@ -221,7 +222,7 @@ p {
 h1 {
   color: #6c5299;
   font-size: 1em;
-  margin-top: 2em;
+  margin-top: 1.9em;
 }
 p {
   color: rgba(236, 231, 227, 0.6);
