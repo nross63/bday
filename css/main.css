@@ -218,3 +218,6 @@ p {
   color: rgba(236, 231, 227, 0.6);
   font-size: 0.8em;
   line-height: 2em; }
+
+hr {
+  margin-top: 6em; }
