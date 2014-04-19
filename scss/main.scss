@@ -20,18 +20,45 @@ canvas {
   height: 100%;
   background-color: rgba(0, 0, 0,.2);
 }
-.glyphicon-heart{
+.navbar-brand{
+    position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: -100px;
+margin-top:0;
+  width: 200px;
+  height: 100px;
+  font-family: 'Cedarville Cursive', cursive;
+}
+/* ============================================== Hearts
+*/
+.glyphicon-heart.toolbar{
   padding-top:.2em;
   color:$pinkish;
   font-size: 2.25em;
+}
+.glyphicon-heart.toolbar.right{
   float:right;
 }
-.navbar-brand{
-  font-family: 'Cedarville Cursive', cursive;
+.glyphicon-heart.toolbar.left{
+  float:left;
 }
-.centering{
-float:none;
-margin:0 auto
+.glyphicon-heart.animated{
+  margin:35px 15%;
+  font-size: 15em;
+  color:$darkPink;
+  -webkit-animation: pounding .5s linear infinite alternate;
+ animation: pounding .5s linear infinite alternate;
+}
+/* ============================================== Animation Heart
+*/
+@-webkit-keyframes pounding{
+  0%{ -webkit-transform: scale(1.5); transform: scale(1.5); }
+  100%{ -webkit-transform: scale(1); transform: scale(1); }
+}
+@keyframes pounding{
+  0%{ -webkit-transform: scale(1.5); transform: scale(1.5); }
+  100%{ -webkit-transform: scale(1); transform: scale(1); }
 }
 /* ============================================== POSITION
 */
@@ -89,7 +116,6 @@ margin-top:0;
 */
 .fuego {
   border-radius: 100%;
-  -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
   box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
   position: absolute;
   top: -12px;
@@ -249,9 +275,6 @@ hr{
 .fancyHR {
     clear: both;
     background-image: -webkit-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-    background-image: -moz-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-    background-image: -ms-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-    background-image: -o-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
     position: relative;
     border: 0;
     height: 1px;
@@ -260,9 +283,6 @@ hr{
 
     .fancyHR:before, .fancyHR:after {
         background-image: -webkit-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-        background-image: -moz-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-        background-image: -ms-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-        background-image: -o-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
         position: absolute;
         content: '';
         display: block;
@@ -291,60 +311,4 @@ hr{
 .fancyHR.b{
     margin-top:2em;
 }
-/************************************
- ************************************
-            Mobile Heart
- ************************************
-**************************************/
-.heart {
-  background-color: #ff4040;
-  border-bottom-right-radius: $size / 10;
-  height: $size;
-  font-family: "Marck Script";
-  margin: auto;
-  position: relative;
-  top: unquote("calc( (100% - #{$size} ) / 2 )");
-  width: $size;
-  @include transform( rotate( 45deg ) );
-  &:before, &:after {
-    background-color: inherit;
-    border-radius: $size;
-    content: "";
-    height: $size;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: $size;
-    z-index: 0;
-  }
-  &:before {
-    top: -$size / 2;
-  }
-  &:after {
-    left: -$size / 2;
-  }
-  & > strong {
-    color: #fff;
-    font-size: 3em;
-    display: block;
-    position: relative;
-    text-align: center;
-    //text-transform: uppercase;
-    width: 5em;
-    z-index: 1;
-    @include transform( rotate( -45deg ) translateX(-0.9em) translateY(-1em) ); // offsets depends on font-family
-  }
-}
 
-
-@keyframes pulse {
-  0% {
-      font-size: 16px;
-  }
-  50% {
-      font-size: 40px;
-  }
-  100% {
-      font-size: 16px;
-  }
-}

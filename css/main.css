@@ -10,18 +10,55 @@ canvas {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); }
 
-.glyphicon-heart {
-  padding-top: 0.2em;
-  color: #c44445;
-  font-size: 2.25em;
-  float: right; }
-
 .navbar-brand {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: 0;
+  width: 200px;
+  height: 100px;
   font-family: 'Cedarville Cursive', cursive; }
 
-.centering {
-  float: none;
-  margin: 0 auto; }
+/* ============================================== Hearts
+*/
+.glyphicon-heart.toolbar {
+  padding-top: 0.2em;
+  color: #c44445;
+  font-size: 2.25em; }
+
+.glyphicon-heart.toolbar.right {
+  float: right; }
+
+.glyphicon-heart.toolbar.left {
+  float: left; }
+
+.glyphicon-heart.animated {
+  margin: 35px 15%;
+  font-size: 15em;
+  color: #D82224;
+  -webkit-animation: pounding 0.5s linear infinite alternate;
+  animation: pounding 0.5s linear infinite alternate; }
+
+/* ============================================== Animation Heart
+*/
+@-webkit-keyframes pounding {
+  0% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes pounding {
+  0% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 /* ============================================== POSITION
 */
@@ -78,7 +115,6 @@ canvas {
 */
 .fuego {
   border-radius: 100%;
-  -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
   box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
   position: absolute;
   top: -12px;
@@ -231,9 +267,6 @@ hr {
 .fancyHR {
   clear: both;
   background-image: -webkit-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -moz-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -ms-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -o-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
   position: relative;
   border: 0;
   height: 1px;
@@ -241,9 +274,6 @@ hr {
 
 .fancyHR:before, .fancyHR:after {
   background-image: -webkit-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -moz-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -ms-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
-  background-image: -o-linear-gradient(left, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0));
   position: absolute;
   content: '';
   display: block;
@@ -267,13 +297,3 @@ hr {
 
 .fancyHR.b {
   margin-top: 2em; }
-
-/************************************
- ************************************
-            CENTER PAGE
- ************************************
-**************************************/
-.center_page {
-  max-width: 25em;
-  margin: 0 auto;
-  padding: 0 15px 15px; }
