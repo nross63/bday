@@ -1,5 +1,12 @@
 $pinkish:  rgb(196,68,69);
 $darkPink:  #D82224;
+$size: 8em;
+$XXL: 150em;
+$XL:  128em;
+$LG:  106em;
+$MED:  84em;
+$SM:  42em;
+$XSM:  20em;
 @import url(http://fonts.googleapis.com/css?family=Lato:300italic);
 
 .jumbotron{
@@ -286,11 +293,58 @@ hr{
 }
 /************************************
  ************************************
-            CENTER PAGE
+            Mobile Heart
  ************************************
 **************************************/
-.center_page {
-    max-width: 25em;
-    margin: 0 auto;
-    padding: 0 15px 15px;
+.heart {
+  background-color: #ff4040;
+  border-bottom-right-radius: $size / 10;
+  height: $size;
+  font-family: "Marck Script";
+  margin: auto;
+  position: relative;
+  top: unquote("calc( (100% - #{$size} ) / 2 )");
+  width: $size;
+  @include transform( rotate( 45deg ) );
+  &:before, &:after {
+    background-color: inherit;
+    border-radius: $size;
+    content: "";
+    height: $size;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $size;
+    z-index: 0;
+  }
+  &:before {
+    top: -$size / 2;
+  }
+  &:after {
+    left: -$size / 2;
+  }
+  & > strong {
+    color: #fff;
+    font-size: 3em;
+    display: block;
+    position: relative;
+    text-align: center;
+    //text-transform: uppercase;
+    width: 5em;
+    z-index: 1;
+    @include transform( rotate( -45deg ) translateX(-0.9em) translateY(-1em) ); // offsets depends on font-family
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+      font-size: 16px;
+  }
+  50% {
+      font-size: 40px;
+  }
+  100% {
+      font-size: 16px;
+  }
 }
