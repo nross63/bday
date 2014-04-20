@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // Autoprefix SCSS/CSS targeting last 2 verstions, browsers > 5%, ie 9, ie 8
 gulp.task('prefix', function(){
 	gulp.src('./css/*.css')
-  		.pipe(prefix(["last 2 version", "> 5%", "ie 9", "ie 8"], { cascade: true }))
+  		.pipe(prefix(["last 1 version", "ie 8", "ie 7"], { cascade: true }))
   		.pipe(gulp.dest('./css/'));
 });
 
@@ -57,7 +57,7 @@ gulp.task('watchJS', function() {
 
 // Watch CSS
 gulp.task('watchSCSS', function() {
-  gulp.watch('scss/**/*.scss', ['sass', 'prefix','minifyCSS']);
+  gulp.watch('scss/**/*.scss', ['sass','minifyCSS']);
 });
 
 // Default
