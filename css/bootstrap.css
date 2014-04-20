@@ -3747,12 +3747,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand:focus {
   text-decoration: none;
 }
-@media (min-width: 768px) {
-  .navbar > .container .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
-  }
-}
+
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4394,10 +4389,7 @@ a.list-group-item.active > .badge,
     padding-right: 60px;
     padding-left: 60px;
   }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
-  }
+
 }
 .thumbnail {
   display: block;
