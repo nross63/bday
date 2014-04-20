@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     prefix = require('gulp-autoprefixer');
+    
 // Autoprefix SCSS/CSS targeting last 2 verstions, browsers > 5%, ie 9, ie 8
 gulp.task('prefix', function(){
 	gulp.src('./css/*.css')
