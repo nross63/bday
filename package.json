@@ -1,0 +1,42 @@
+{
+  "name": "application",
+  "description" : "my package.json template",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "@nross <nross63@gmail.com>",
+  "keywords": [
+    "css",
+    "sass",
+    "gulp",
+    "node",
+    "build",
+    "module"
+  ],
+  "homepage": "https://github.com/nross63/build",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nross63/build.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nross63/build/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/nross63/build/LICENSE"
+  },
+  "dependencies": {
+    "gulp" : "3.6.x",
+    "gulp-sass":"0.7.X",
+    "gulp-watch" :"0.6.x",
+    "gulp-jshint" :"1.5.x",
+    "gulp-concat" :"2.2.x",
+    "gulp-rename" :"1.2.x",
+    "gulp-autoprefixer" : "0.0.7",
+    "gulp-uglify" :"0.2.x",
+    "gulp-coffee" :"1.4.x",
+    "gulp-imagemin" : "0.2.x",
+    "gulp-minify-html" :"0.1.x",
+    "gulp-coffeelint" :"0.3.x",
+    "gulp-csslint" :"0.1.x"
+  }
+}
